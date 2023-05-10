@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link type="Image/x-icon" href="./favicon.ico" rel="icon">
+  <title>Memory Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <section>
+    <h1>Memory Game</h1>
+    <button class="start" data-up>Начать игру</button>
+  </section>
+  <section>
+    <h2>Выбери картинки</h2>
+    <div class="buttons" id="img-choice">
+      <button class="dc" data-up>DC</button>
+      <button class="tw" data-up>Сумерки</button>
+    </div>
+  </section>
+  <section>
+    <h2>Выбери размер доски</h2>
+    <div class="buttons" id="size-choice">
+      <button class="small" data-up>4x4</button>
+      <button class="big" data-up>6x6</button>
+    </div>
+  </section>
+  <section>
+    <div class="checker">
+      <span>Время:<strong id="timer">00:00</strong></span>
+      <span>Попытки:<strong id="attempt">0</strong></span>
+    </div>
+    <div id="board" class="big"></div>
+    <div class="restart" id="restart">
+      <h2>Победа!</h2>
+      <button btn-restart>Новая игра</button>
+    </div>
+  </section>
+
+  <template id="tmp">
+    <div class="cell">
+      <div class="back"></div>
+      <img src="" alt="картинка" width="100%" height="100%">
+    </div>
+  </template>
+  <script src="game.js"></script>
+</body>
+
+</html>
